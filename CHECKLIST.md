@@ -10,16 +10,16 @@ Regras de negócio: `E:\web-bracket\BUSINESS_RULES.md`.
 - [x] Biome (`pnpm lint`, `pnpm format`)
 - [x] Vitest (`pnpm test`) e `pnpm typecheck`
 - [x] Servidor mínimo com `/health` e teste
-- [ ] `git init` + primeiro commit
-- [ ] Instalar Docker Desktop (`winget install Docker.DockerDesktop`) — necessário na etapa 2
+- [x] `git init` + primeiro commit
+- [x] Instalar Docker Desktop (`winget install Docker.DockerDesktop`) — necessário na etapa 2
 
 ## Etapa 1 — Servidor HTTP com `node:http`
 
 Estudo
-- [ ] `IncomingMessage` / `ServerResponse` como streams
-- [ ] Event loop: o que bloqueia e por quê
-- [ ] `server.close()` vs `closeIdleConnections()`
-- [ ] Por que `127.0.0.1` e não `0.0.0.0`
+- [] `IncomingMessage` / `ServerResponse` como streams
+- [x] Event loop: o que bloqueia e por quê
+- [x] `server.close()` vs `closeIdleConnections()`
+- [x] Por que `127.0.0.1` e não `0.0.0.0`
 
 Implementação
 - [ ] `src/http/router.ts`: `get`, `post`, `put`, `delete`

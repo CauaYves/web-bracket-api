@@ -1,4 +1,5 @@
 import { createServer } from "node:http"
+import { GET, POST } from "./http/router.ts"
 
 const port = Number(process.env.PORT ?? 4000)
 const host = process.env.HOST ?? "127.0.0.1"
@@ -8,6 +9,14 @@ const server = createServer((req, res) => {
     res.writeHead(200, { "content-type": "application/json" })
     res.end(JSON.stringify({ status: "ok" }))
     return
+  }
+
+  if (req.method === "GET" && req.url === "/http") {
+    return GET(req, res)
+  }
+
+  if (req.method === "POST" && req.url === "/http") {
+    return POST(req, res)
   }
   res.writeHead(404, { "content-type": "application/json" })
   res.end(JSON.stringify({ code: "not_found" }))
